@@ -1,4 +1,4 @@
-// Content script - runs on Twitter/X pages
+// Content script - runs on pages to check if they should be blocked
 // Embeds the Neovim challenge directly on the page
 
 interface UnlockState {
@@ -9,8 +9,27 @@ interface UnlockState {
 let overlayElement: HTMLDivElement | null = null;
 let challengeIframe: HTMLIFrameElement | null = null;
 
+async function getBlockedSites(): Promise<string[]> {
+  const result = await chrome.storage.local.get('blockedSites');
+  return result.blockedSites ?? ['twitter.com', 'x.com'];
+}
+
+function isHostnameBlocked(hostname: string, blockedSites: string[]): boolean {
+  const normalized = hostname.toLowerCase().replace(/^www\./, '');
+  return blockedSites.some(site => normalized === site || normalized.endsWith('.' + site));
+}
+
 async function checkAndBlock() {
   try {
+    // First check if this site should be blocked
+    const blockedSites = await getBlockedSites();
+    const hostname = window.location.hostname;
+
+    if (!isHostnameBlocked(hostname, blockedSites)) {
+      // Site is not in the blocked list, do nothing
+      return;
+    }
+
     const response = await chrome.runtime.sendMessage({ type: 'GET_UNLOCK_STATE' });
     const state = response as UnlockState;
 
@@ -24,8 +43,8 @@ async function checkAndBlock() {
       hideChallenge();
     }
   } catch (error) {
-    console.error('Block Twitter: Error checking unlock state', error);
-    showChallenge(); // Block by default if there's an error
+    console.error('Vim Blocker: Error checking state', error);
+    // Don't block if there's an error - fail open for non-critical sites
   }
 }
 
@@ -71,7 +90,7 @@ function handleChallengeMessage(event: MessageEvent) {
   // Verify origin is from our extension
   if (event.data?.type === 'CHALLENGE_COMPLETE') {
     hideChallenge();
-    // Reload the page to show Twitter
+    // Reload the page to show content
     window.location.reload();
   }
 }
@@ -104,7 +123,7 @@ chrome.runtime.onMessage.addListener((message) => {
     hideChallenge();
     window.location.reload();
   } else if (message.type === 'LOCKED') {
-    showChallenge();
+    checkAndBlock(); // Re-check if this site should be blocked
   }
 });
 

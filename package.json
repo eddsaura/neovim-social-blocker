@@ -1,7 +1,7 @@
 {
   "name": "block-twitter-nvim",
   "version": "1.0.0",
-  "description": "Chrome extension that blocks Twitter/X until you pass a Vim challenge. Learn Vim while fighting social media addiction.",
+  "description": "Chrome extension that blocks distracting social media until you pass a Vim challenge. Learn Vim while fighting social media addiction.",
   "author": "saura <https://x.com/iamsaura_>",
   "license": "MIT",
   "repository": {

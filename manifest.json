@@ -1,18 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Block Twitter - Neovim Test",
+  "name": "Vim Social Blocker",
   "version": "1.0.0",
-  "description": "Blocks Twitter/X until you pass a Neovim proficiency test",
+  "description": "Block distracting sites until you pass a Vim challenge. Learn Vim while fighting social media addiction.",
   "permissions": [
     "storage",
     "alarms",
     "tabs"
   ],
   "host_permissions": [
-    "*://twitter.com/*",
-    "*://x.com/*",
-    "*://www.twitter.com/*",
-    "*://www.x.com/*"
+    "<all_urls>"
   ],
   "background": {
     "service_worker": "src/background/index.ts",
@@ -20,12 +17,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://twitter.com/*",
-        "*://x.com/*",
-        "*://www.twitter.com/*",
-        "*://www.x.com/*"
-      ],
+      "matches": ["<all_urls>"],
       "js": ["src/content/index.ts"],
       "run_at": "document_start"
     }
@@ -47,7 +39,7 @@
   "web_accessible_resources": [
     {
       "resources": ["src/challenge/*", "src/builder/*"],
-      "matches": ["*://twitter.com/*", "*://x.com/*", "*://www.twitter.com/*", "*://www.x.com/*", "<all_urls>"]
+      "matches": ["<all_urls>"]
     }
   ]
 }

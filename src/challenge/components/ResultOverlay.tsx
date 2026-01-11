@@ -28,7 +28,7 @@ export function ResultOverlay({
 
         <p className="result-message">
           {isSuccess
-            ? 'Twitter is now unlocked for 24 hours. Keep practicing those Vim skills!'
+            ? 'Blocked sites are now unlocked. Keep practicing those Vim skills!'
             : 'Don\'t give up! Practice makes perfect.'}
         </p>
 
@@ -46,7 +46,7 @@ export function ResultOverlay({
         <div>
           {isSuccess ? (
             <button className="result-button" onClick={onClose}>
-              Continue to Twitter
+              Continue
             </button>
           ) : (
             <>

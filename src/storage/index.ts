@@ -6,7 +6,10 @@ import {
   DEFAULT_UNLOCK_STATE,
   DEFAULT_CONFIG,
   DEFAULT_STATS,
+  DEFAULT_BLOCKED_SITES,
   KeymapDefinition,
+  UnlockDurationMode,
+  UNLOCK_DURATION_PRESETS,
 } from './schema';
 
 type StorageKey = keyof StorageSchema;
@@ -43,7 +46,12 @@ export async function getUnlockState(): Promise<UnlockState> {
 
 export async function unlockTwitter(durationMs?: number): Promise<UnlockState> {
   const now = Date.now();
-  const duration = durationMs ?? DEFAULT_UNLOCK_STATE.unlockDurationMs;
+  // Use provided duration, or get from config, or use default
+  let duration = durationMs;
+  if (!duration) {
+    const config = await getConfig();
+    duration = UNLOCK_DURATION_PRESETS[config.unlockDurationMode].durationMs;
+  }
   const newState: UnlockState = {
     isUnlocked: true,
     unlockedAt: now,
@@ -146,16 +154,47 @@ export async function setKeymaps(
   return keymaps;
 }
 
+// Blocked sites management
+export async function getBlockedSites(): Promise<string[]> {
+  return (await get('blockedSites')) ?? DEFAULT_BLOCKED_SITES;
+}
+
+export async function addBlockedSite(site: string): Promise<string[]> {
+  const sites = await getBlockedSites();
+  const normalized = site.toLowerCase().replace(/^(https?:\/\/)?(www\.)?/, '').replace(/\/.*$/, '');
+  if (!sites.includes(normalized)) {
+    sites.push(normalized);
+    await set('blockedSites', sites);
+  }
+  return sites;
+}
+
+export async function removeBlockedSite(site: string): Promise<string[]> {
+  const sites = await getBlockedSites();
+  const filtered = sites.filter(s => s !== site);
+  await set('blockedSites', filtered);
+  return filtered;
+}
+
+export async function isCurrentSiteBlocked(hostname: string): Promise<boolean> {
+  const sites = await getBlockedSites();
+  const normalized = hostname.toLowerCase().replace(/^www\./, '');
+  return sites.some(site => normalized === site || normalized.endsWith('.' + site));
+}
+
 export type {
   StorageSchema,
   UnlockState,
   UserConfig,
   UserStats,
   KeymapDefinition,
+  UnlockDurationMode,
 };
 
 export {
   DEFAULT_CONFIG,
   DEFAULT_STATS,
   DEFAULT_UNLOCK_STATE,
+  DEFAULT_BLOCKED_SITES,
+  UNLOCK_DURATION_PRESETS,
 };

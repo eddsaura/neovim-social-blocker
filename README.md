@@ -1,22 +1,22 @@
-# Block Twitter - Vim Edition
+# Vim Social Blocker
 
 > Learn Vim while fighting social media addiction. One keystroke at a time.
 
-A Chrome extension that blocks Twitter/X until you complete a Vim challenge. Pass the test, unlock Twitter for 24 hours. Fail, and keep practicing those motions.
+A Chrome extension that blocks distracting social media sites until you complete a Vim challenge. Pass the test, unlock your socials. Fail, and keep practicing those motions.
 
 ## Why?
 
-Because scrolling Twitter is easy. Learning Vim is hard. This extension makes the hard thing the gatekeeper to the easy thing.
+Because scrolling socials is easy. Learning Vim is hard. This extension makes the hard thing the gatekeeper to the easy thing.
 
-80 challenges covering everything from basic motions (`hjkl`) to advanced text objects (`ci"`, `da{`), with practical coding scenarios mixed in.
+Block Twitter, Reddit, Instagram, TikTok, or any site that steals your focus. 80 challenges covering everything from basic motions (`hjkl`) to advanced text objects (`ci"`, `da{`), with practical coding scenarios mixed in.
 
 ## Features
 
-- **Daily unlock**: Pass a challenge set, get 24 hours of Twitter access
+- **Block any site**: Add any distracting website to your block list
+- **Configurable unlock duration**: Hardcore (5 min), Standard (10 min), or Casual (20 min)
 - **80 challenges**: From beginner (`w`, `b`, `dd`) to advanced (`ci"`, `dat`, visual block mode)
 - **Real Vim emulation**: Powered by CodeMirror + [@replit/codemirror-vim](https://github.com/replit/codemirror-vim)
 - **Challenge Builder**: Create and share your own challenges
-- **Configurable**: Set difficulty, time limits, and challenge categories
 - **Custom keymaps**: Upload your `init.vim` to use your own mappings
 
 ## Installation
@@ -43,12 +43,20 @@ Then load in Chrome:
 
 ## How it works
 
-1. Navigate to twitter.com or x.com
-2. Instead of your feed, you'll see a blocking overlay
+1. Navigate to any blocked site (Twitter, Reddit, etc.)
+2. Instead of the feed, you'll see a blocking overlay
 3. Click "Start Challenge" to begin
 4. Complete the Vim challenges before time runs out
-5. Success = 24 hours of Twitter access
+5. Success = Temporary access to blocked sites
 6. Fail = Try again (and get better at Vim)
+
+## Unlock duration modes
+
+| Mode | Duration | For |
+|------|----------|-----|
+| Hardcore | 5 minutes | Maximum discipline |
+| Standard | 10 minutes | Balanced approach |
+| Casual | 20 minutes | Gentler transition |
 
 ## Challenge categories
 
@@ -89,6 +97,8 @@ The `|` character marks cursor position. Place challenges in `src/challenges/` a
 
 Click the extension icon → Settings to configure:
 
+- **Blocked sites**: Add/remove any websites you want to block
+- **Unlock duration**: Choose your difficulty mode (5/10/20 min)
 - **Time limit**: How long you have to complete challenges (default: 60s)
 - **Challenge count**: Number of challenges per attempt (default: 5)
 - **Difficulty**: Easy, Medium, Hard, or Mixed

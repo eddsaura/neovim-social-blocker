@@ -9,6 +9,14 @@ export type ChallengeCategory =
   | 'visual-select'
   | 'combined';
 
+export type UnlockDurationMode = 'hardcore' | 'standard' | 'casual';
+
+export const UNLOCK_DURATION_PRESETS: Record<UnlockDurationMode, { label: string; durationMs: number }> = {
+  hardcore: { label: 'Hardcore Mode', durationMs: 5 * 60 * 1000 },      // 5 minutes
+  standard: { label: 'Standard League', durationMs: 10 * 60 * 1000 },  // 10 minutes
+  casual: { label: 'Casual Player', durationMs: 20 * 60 * 1000 },      // 20 minutes
+};
+
 export interface UnlockState {
   isUnlocked: boolean;
   unlockedAt: number | null;
@@ -25,6 +33,7 @@ export interface UserConfig {
   fontSize: number;
   showLineNumbers: boolean;
   showHints: boolean;
+  unlockDurationMode: UnlockDurationMode;
 }
 
 export interface CategoryStat {
@@ -56,13 +65,19 @@ export interface StorageSchema {
   config: UserConfig;
   stats: UserStats;
   keymaps: KeymapDefinition[];
+  blockedSites: string[];
 }
+
+export const DEFAULT_BLOCKED_SITES: string[] = [
+  'twitter.com',
+  'x.com',
+];
 
 export const DEFAULT_UNLOCK_STATE: UnlockState = {
   isUnlocked: false,
   unlockedAt: null,
   expiresAt: null,
-  unlockDurationMs: 24 * 60 * 60 * 1000, // 24 hours
+  unlockDurationMs: UNLOCK_DURATION_PRESETS.casual.durationMs, // Uses config setting
 };
 
 export const DEFAULT_CONFIG: UserConfig = {
@@ -82,6 +97,7 @@ export const DEFAULT_CONFIG: UserConfig = {
   fontSize: 14,
   showLineNumbers: true,
   showHints: true,
+  unlockDurationMode: 'casual',
 };
 
 export const DEFAULT_STATS: UserStats = {
