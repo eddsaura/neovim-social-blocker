@@ -1,0 +1,15 @@
+{
+  "id": "move-to-line-start",
+  "name": "Move to Line Start",
+  "description": "Jump to the beginning of the line using '0'",
+  "type": "motion",
+  "category": "line-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "line"],
+  "initial": "const message = \"Hello\"|;",
+  "expected": "|const message = \"Hello\";",
+  "hints": [
+    "Use '0' to jump to the beginning of the line",
+    "Use '^' to jump to the first non-whitespace character"
+  ]
+}

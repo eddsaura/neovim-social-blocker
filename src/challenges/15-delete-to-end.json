@@ -1,0 +1,15 @@
+{
+  "id": "delete-to-end",
+  "name": "Delete to Line End",
+  "description": "Delete from cursor to end of line using 'D' or 'd$'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "easy",
+  "tags": ["beginner", "editing", "delete"],
+  "initial": "const msg = |\"delete this part\";",
+  "expected": "const msg =|",
+  "hints": [
+    "Use 'D' or 'd$' to delete to end of line",
+    "'D' is a shortcut for 'd$'"
+  ]
+}

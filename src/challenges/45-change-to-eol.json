@@ -1,0 +1,15 @@
+{
+  "id": "change-to-eol",
+  "name": "Change to End of Line",
+  "description": "Change everything from cursor to end of line to 'null;' using 'C'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "change"],
+  "initial": "const result = |getValue();",
+  "expected": "const result = |null;",
+  "hints": [
+    "Use 'C' or 'c$' to change to end of line",
+    "'C' is a shortcut for 'c$'"
+  ]
+}

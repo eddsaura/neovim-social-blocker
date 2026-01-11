@@ -1,0 +1,15 @@
+{
+  "id": "indent-line",
+  "name": "Indent Line",
+  "description": "Indent the current line using '>>'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "indent"],
+  "initial": "if (true) {\n|console.log('hi');\n}",
+  "expected": "if (true) {\n  |console.log('hi');\n}",
+  "hints": [
+    "Use '>>' to indent the current line",
+    "Use '<<' to unindent"
+  ]
+}

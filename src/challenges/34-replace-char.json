@@ -1,0 +1,15 @@
+{
+  "id": "replace-char",
+  "name": "Replace Character",
+  "description": "Fix the typo: change 'teh' to 'the' using 'r'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "replace"],
+  "initial": "t|eh quick brown fox",
+  "expected": "t|he quick brown fox",
+  "hints": [
+    "Use 'r' followed by a character to replace",
+    "This replaces without entering insert mode"
+  ]
+}

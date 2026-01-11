@@ -1,0 +1,15 @@
+{
+  "id": "paste-before",
+  "name": "Paste Before Cursor",
+  "description": "Move 'world' before 'hello' using delete and paste",
+  "type": "editing",
+  "category": "yank-paste",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "yank"],
+  "initial": "hello |world",
+  "expected": "world |hello",
+  "hints": [
+    "Use 'dw' to delete 'world', then 'b' to go back",
+    "Use 'P' (uppercase) to paste before cursor"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "add-return",
+  "name": "Add Return Statement",
+  "description": "Add 'return ' before the expression using 'I'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "insert"],
+  "initial": "function get() {\n  |value;\n}",
+  "expected": "function get() {\n  |return value;\n}",
+  "hints": [
+    "Use 'I' to insert at first non-blank character",
+    "Type 'return ' then press Esc"
+  ]
+}

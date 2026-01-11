@@ -1,0 +1,15 @@
+{
+  "id": "find-and-delete",
+  "name": "Find and Delete to Character",
+  "description": "Delete from cursor to the ';' (including it) using 'df;'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "find"],
+  "initial": "const x = |getVal(); return x;",
+  "expected": "const x = | return x;",
+  "hints": [
+    "Use 'df;' to delete through the semicolon",
+    "'d' + 'f' + character deletes through that character"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "first-non-blank",
+  "name": "First Non-Blank Character",
+  "description": "Jump to the first non-whitespace character using '^'",
+  "type": "motion",
+  "category": "line-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "line"],
+  "initial": "    |return true;",
+  "expected": "    |return true;",
+  "hints": [
+    "Use '^' to jump to the first non-whitespace character",
+    "This is useful for indented code"
+  ]
+}

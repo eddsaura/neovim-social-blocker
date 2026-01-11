@@ -1,0 +1,15 @@
+{
+  "id": "delete-empty-lines",
+  "name": "Delete Empty Lines",
+  "description": "Delete the two empty lines between the code",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "cleanup"],
+  "initial": "const a = 1;\n|\n\nconst b = 2;",
+  "expected": "const a = 1;\n|const b = 2;",
+  "hints": [
+    "Use '2dd' to delete both empty lines",
+    "Or 'dj' to delete current and next line"
+  ]
+}

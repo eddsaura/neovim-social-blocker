@@ -1,0 +1,15 @@
+{
+  "id": "change-word",
+  "name": "Change Word",
+  "description": "Change 'old' to 'new' using 'cw'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["beginner", "editing", "change"],
+  "initial": "const |old = true;",
+  "expected": "const |new = true;",
+  "hints": [
+    "Use 'cw' to change from cursor to end of word",
+    "'c' deletes and enters insert mode"
+  ]
+}

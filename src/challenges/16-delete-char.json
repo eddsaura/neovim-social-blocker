@@ -1,0 +1,15 @@
+{
+  "id": "delete-char",
+  "name": "Delete Character",
+  "description": "Delete the extra 'l' character using 'x'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "easy",
+  "tags": ["beginner", "editing", "delete"],
+  "initial": "hel|llo world",
+  "expected": "hel|lo world",
+  "hints": [
+    "Use 'x' to delete the character under the cursor",
+    "Use 'X' to delete the character before the cursor"
+  ]
+}

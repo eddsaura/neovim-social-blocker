@@ -1,0 +1,15 @@
+{
+  "id": "delete-word",
+  "name": "Delete Word",
+  "description": "Delete the word 'old' using 'dw'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "easy",
+  "tags": ["beginner", "editing", "delete"],
+  "initial": "const |old value = 42;",
+  "expected": "const |value = 42;",
+  "hints": [
+    "Use 'dw' to delete from cursor to start of next word",
+    "'d' is the delete operator, 'w' is the word motion"
+  ]
+}

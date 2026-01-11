@@ -1,0 +1,15 @@
+{
+  "id": "add-async-await",
+  "name": "Add Async/Await",
+  "description": "Add 'async' to function and 'await' before the call",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "async"],
+  "initial": "|function getData() {\n  return fetch('/api');\n}",
+  "expected": "|async function getData() {\n  return await fetch('/api');\n}",
+  "hints": [
+    "Add 'async ' before 'function'",
+    "Add 'await ' before 'fetch'"
+  ]
+}

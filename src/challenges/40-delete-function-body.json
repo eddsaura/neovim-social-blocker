@@ -1,0 +1,15 @@
+{
+  "id": "delete-function-body",
+  "name": "Delete Function Body",
+  "description": "Delete the entire function body (keep the braces) using 'di{'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "text-objects"],
+  "initial": "function test() {\n  const x = 1;\n  |return x * 2;\n}",
+  "expected": "function test() {\n|}",
+  "hints": [
+    "Use 'di{' from anywhere inside the function body",
+    "This deletes everything between the braces"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "delete-paragraph",
+  "name": "Delete Paragraph",
+  "description": "Delete the entire paragraph using 'dip'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "text-objects"],
+  "initial": "Header\n\n|This is a paragraph.\nIt has multiple lines.\nDelete all of it.\n\nFooter",
+  "expected": "Header\n\n|Footer",
+  "hints": [
+    "Use 'dip' to delete inner paragraph",
+    "A paragraph is text separated by blank lines"
+  ]
+}

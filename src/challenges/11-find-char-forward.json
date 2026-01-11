@@ -1,0 +1,15 @@
+{
+  "id": "find-char-forward",
+  "name": "Find Character Forward",
+  "description": "Jump to the '=' character using 'f='",
+  "type": "motion",
+  "category": "find-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "find"],
+  "initial": "|let count = 0;",
+  "expected": "let count |= 0;",
+  "hints": [
+    "Use 'f' followed by a character to jump to it",
+    "Use ';' to repeat the last find"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Block Twitter - Neovim Test",
+  "version": "1.0.0",
+  "description": "Blocks Twitter/X until you pass a Neovim proficiency test",
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://twitter.com/*",
+    "*://x.com/*",
+    "*://www.twitter.com/*",
+    "*://www.x.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://twitter.com/*",
+        "*://x.com/*",
+        "*://www.twitter.com/*",
+        "*://www.x.com/*"
+      ],
+      "js": ["src/content/index.ts"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "public/icons/icon16.png",
+      "48": "public/icons/icon48.png",
+      "128": "public/icons/icon128.png"
+    }
+  },
+  "options_page": "src/options/options.html",
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/challenge/*", "src/builder/*"],
+      "matches": ["*://twitter.com/*", "*://x.com/*", "*://www.twitter.com/*", "*://www.x.com/*", "<all_urls>"]
+    }
+  ]
+}

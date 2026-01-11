@@ -1,0 +1,15 @@
+{
+  "id": "delete-inner-parens",
+  "name": "Delete Inside Parentheses",
+  "description": "Delete the function arguments using 'di('",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "text-objects"],
+  "initial": "console.log(|\"debug message\");",
+  "expected": "console.log(|);",
+  "hints": [
+    "Use 'di(' or 'di)' to delete inside parentheses",
+    "Both '(' and ')' work the same way"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "change-var-to-const",
+  "name": "Change var to const",
+  "description": "Change 'var' to 'const' using 'cw'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "refactoring"],
+  "initial": "|var x = 10;",
+  "expected": "|const x = 10;",
+  "hints": [
+    "Use 'cw' to change word, then type 'const'",
+    "Press Esc when done to return to normal mode"
+  ]
+}

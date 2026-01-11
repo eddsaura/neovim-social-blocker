@@ -1,0 +1,15 @@
+{
+  "id": "visual-line-delete",
+  "name": "Visual Line Delete",
+  "description": "Delete lines 2 and 3 using visual line mode",
+  "type": "editing",
+  "category": "visual-select",
+  "difficulty": "medium",
+  "tags": ["intermediate", "visual", "editing"],
+  "initial": "line 1\n|line 2\nline 3\nline 4",
+  "expected": "line 1\n|line 4",
+  "hints": [
+    "Press 'V' to enter visual line mode",
+    "Use 'j' to extend selection, then 'd' to delete"
+  ]
+}

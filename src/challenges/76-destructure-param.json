@@ -1,0 +1,15 @@
+{
+  "id": "destructure-param",
+  "name": "Destructure Parameter",
+  "description": "Change 'props' to destructured '{ name, value }'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "destructuring"],
+  "initial": "function Component(|props) {\n  return props.name;\n}",
+  "expected": "function Component(|{ name, value }) {\n  return props.name;\n}",
+  "hints": [
+    "Use 'ciw' to change the word 'props'",
+    "Type '{ name, value }' then press Esc"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "delete-argument",
+  "name": "Delete Function Argument",
+  "description": "Delete the second argument from the function call",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "functions"],
+  "initial": "doSomething(first, |second, third);",
+  "expected": "doSomething(first, |third);",
+  "hints": [
+    "Use 'df,' to delete through the comma",
+    "Or 'dw' followed by 'x' to remove extra comma"
+  ]
+}

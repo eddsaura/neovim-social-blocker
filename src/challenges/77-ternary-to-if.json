@@ -1,0 +1,15 @@
+{
+  "id": "ternary-to-if",
+  "name": "Extract Ternary",
+  "description": "Change ternary 'a ? b : c' to just 'b' (remove ternary)",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "refactoring"],
+  "initial": "const val = |condition ? result : fallback;",
+  "expected": "const val = |result;",
+  "hints": [
+    "Delete from 'condition' to 'result', keep 'result'",
+    "Then delete '? ' before and everything after"
+  ]
+}

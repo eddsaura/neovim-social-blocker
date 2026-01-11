@@ -1,0 +1,15 @@
+{
+  "id": "swap-arguments",
+  "name": "Swap Function Arguments",
+  "description": "Swap 'a' and 'b' in the function parameters",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "hard",
+  "tags": ["coding", "practical", "refactoring"],
+  "initial": "function add(|a, b) {}",
+  "expected": "function add(|b, a) {}",
+  "hints": [
+    "Delete 'a, ' with 'df ', move to end, paste with 'P'",
+    "Or use visual mode to select and move"
+  ]
+}

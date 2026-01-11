@@ -1,0 +1,15 @@
+{
+  "id": "goto-line-end",
+  "name": "Go to File End",
+  "description": "Jump to the last line of the file using 'G'",
+  "type": "motion",
+  "category": "line-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "line"],
+  "initial": "|Line 1\nLine 2\nLine 3\nLine 4\nLine 5",
+  "expected": "Line 1\nLine 2\nLine 3\nLine 4\n|Line 5",
+  "hints": [
+    "Use 'G' to jump to the last line",
+    "Use a number before G (e.g., '3G') to go to a specific line"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "delete-to-char",
+  "name": "Delete to Character",
+  "description": "Delete from cursor up to and including '=' using 'df='",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "find"],
+  "initial": "|const value = 42;",
+  "expected": "| 42;",
+  "hints": [
+    "Use 'df' followed by a character to delete through it",
+    "'dt' would stop just before the character"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "add-default-param",
+  "name": "Add Default Parameter",
+  "description": "Add default value '10' to the 'count' parameter",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "functions"],
+  "initial": "function repeat(str, count|) {}",
+  "expected": "function repeat(str, count = 10|) {}",
+  "hints": [
+    "Use 'a' to append after cursor",
+    "Type ' = 10' then press Esc"
+  ]
+}

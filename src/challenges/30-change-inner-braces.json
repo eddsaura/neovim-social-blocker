@@ -1,0 +1,15 @@
+{
+  "id": "change-inner-braces",
+  "name": "Change Inside Braces",
+  "description": "Change the function body to 'return null;' using 'ci{'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "text-objects"],
+  "initial": "function test() {| return true; }",
+  "expected": "function test() {| return null; }",
+  "hints": [
+    "Use 'ci{' to change inside curly braces",
+    "This deletes content and enters insert mode"
+  ]
+}

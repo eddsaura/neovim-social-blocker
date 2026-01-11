@@ -1,0 +1,15 @@
+{
+  "id": "delete-inner-word",
+  "name": "Delete Inner Word",
+  "description": "Delete the word 'broken' using 'diw'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "text-objects"],
+  "initial": "This is br|oken code",
+  "expected": "This is | code",
+  "hints": [
+    "Use 'diw' to delete inner word",
+    "'iw' is a text object that selects the word under cursor"
+  ]
+}

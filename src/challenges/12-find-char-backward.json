@@ -1,0 +1,15 @@
+{
+  "id": "find-char-backward",
+  "name": "Find Character Backward",
+  "description": "Jump backward to the 'l' character using 'Fl'",
+  "type": "motion",
+  "category": "find-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "find"],
+  "initial": "let value = |100;",
+  "expected": "let va|lue = 100;",
+  "hints": [
+    "Use 'F' followed by a character to find it backward",
+    "Capital F searches backward, lowercase f searches forward"
+  ]
+}

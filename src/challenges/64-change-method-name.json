@@ -1,0 +1,15 @@
+{
+  "id": "change-method-name",
+  "name": "Rename Method",
+  "description": "Rename 'getData' to 'fetchData' using 'cw'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "refactoring"],
+  "initial": "const result = api.|getData();",
+  "expected": "const result = api.|fetchData();",
+  "hints": [
+    "Use 'cw' to change word",
+    "Type 'fetchData' then press Esc"
+  ]
+}

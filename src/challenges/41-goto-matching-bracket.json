@@ -1,0 +1,15 @@
+{
+  "id": "goto-matching-bracket",
+  "name": "Go to Matching Bracket",
+  "description": "Jump from the opening brace to the closing brace using '%'",
+  "type": "motion",
+  "category": "find-motion",
+  "difficulty": "hard",
+  "tags": ["advanced", "navigation", "brackets"],
+  "initial": "function test() |{\n  return true;\n}",
+  "expected": "function test() {\n  return true;\n|}",
+  "hints": [
+    "Use '%' to jump to the matching bracket",
+    "Works with (), [], and {}"
+  ]
+}

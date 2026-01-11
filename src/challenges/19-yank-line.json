@@ -1,0 +1,15 @@
+{
+  "id": "yank-line",
+  "name": "Yank and Paste Line",
+  "description": "Copy line 2 and paste it after line 3 using 'yy' and 'p'",
+  "type": "editing",
+  "category": "yank-paste",
+  "difficulty": "easy",
+  "tags": ["beginner", "editing", "yank"],
+  "initial": "first\n|second\nthird",
+  "expected": "first\nsecond\nthird\n|second",
+  "hints": [
+    "Use 'yy' to yank (copy) the entire line",
+    "Use 'p' to paste after the current line"
+  ]
+}

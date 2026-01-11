@@ -1,0 +1,15 @@
+{
+  "id": "delete-around-word",
+  "name": "Delete Around Word",
+  "description": "Delete the word 'extra' including surrounding space using 'daw'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "text-objects"],
+  "initial": "remove |extra word here",
+  "expected": "remove |word here",
+  "hints": [
+    "Use 'daw' to delete around word (includes whitespace)",
+    "'aw' includes trailing or leading whitespace"
+  ]
+}

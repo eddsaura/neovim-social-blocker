@@ -1,0 +1,15 @@
+{
+  "id": "move-to-line-end",
+  "name": "Move to Line End",
+  "description": "Jump to the end of the line using '$'",
+  "type": "motion",
+  "category": "line-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "line"],
+  "initial": "|const message = \"Hello\";",
+  "expected": "const message = \"Hello\"|;",
+  "hints": [
+    "Use '$' to jump to the end of the line",
+    "This is one of the most useful motions"
+  ]
+}

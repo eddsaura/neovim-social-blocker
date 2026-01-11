@@ -1,0 +1,15 @@
+{
+  "id": "wrap-in-function",
+  "name": "Wrap in Arrow Function",
+  "description": "Wrap 'value' in an arrow function: () => value",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "functions"],
+  "initial": "const getter = |value;",
+  "expected": "const getter = |() => value;",
+  "hints": [
+    "Use 'i' to insert '() => ' before value",
+    "Position cursor, enter insert mode, type the wrapper"
+  ]
+}

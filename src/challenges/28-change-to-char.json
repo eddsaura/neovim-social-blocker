@@ -1,0 +1,15 @@
+{
+  "id": "change-to-char",
+  "name": "Change to Character",
+  "description": "Change 'oldFunction' to 'newFunc' using 'ct('",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "find"],
+  "initial": "|oldFunction(arg);",
+  "expected": "|newFunc(arg);",
+  "hints": [
+    "Use 'ct(' to change up to but not including '('",
+    "Then type the new text"
+  ]
+}

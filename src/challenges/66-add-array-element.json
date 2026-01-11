@@ -1,0 +1,15 @@
+{
+  "id": "add-array-element",
+  "name": "Add Array Element",
+  "description": "Add 'cherry' to the array after 'banana'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "arrays"],
+  "initial": "const fruits = ['apple', 'banana'|];",
+  "expected": "const fruits = ['apple', 'banana', 'cherry'|];",
+  "hints": [
+    "Use 'i' to insert before ']'",
+    "Type \", 'cherry'\" then press Esc"
+  ]
+}

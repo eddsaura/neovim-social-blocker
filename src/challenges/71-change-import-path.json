@@ -1,0 +1,15 @@
+{
+  "id": "change-import-path",
+  "name": "Change Import Path",
+  "description": "Change the import path from './old' to './new'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "imports"],
+  "initial": "import { utils } from '|./old';",
+  "expected": "import { utils } from '|./new';",
+  "hints": [
+    "Use 'ci'' to change inside single quotes",
+    "Type './new' then press Esc"
+  ]
+}

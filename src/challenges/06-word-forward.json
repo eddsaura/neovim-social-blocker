@@ -1,0 +1,15 @@
+{
+  "id": "word-forward",
+  "name": "Word Forward",
+  "description": "Move forward to the start of the next word using 'w'",
+  "type": "motion",
+  "category": "word-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "word"],
+  "initial": "|const value = 42;",
+  "expected": "const |value = 42;",
+  "hints": [
+    "Use 'w' to move to the start of the next word",
+    "Words are separated by punctuation and whitespace"
+  ]
+}

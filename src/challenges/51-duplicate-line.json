@@ -1,0 +1,15 @@
+{
+  "id": "duplicate-line",
+  "name": "Duplicate Line",
+  "description": "Duplicate the current line below it using 'yyp'",
+  "type": "editing",
+  "category": "yank-paste",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "duplicate"],
+  "initial": "const |config = {};",
+  "expected": "const config = {};\n|const config = {};",
+  "hints": [
+    "Use 'yy' to yank the line, then 'p' to paste below",
+    "This is a very common operation in coding"
+  ]
+}

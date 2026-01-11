@@ -1,0 +1,15 @@
+{
+  "id": "add-optional-chain",
+  "name": "Add Optional Chaining",
+  "description": "Change 'user.name' to 'user?.name' using insert",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "safety"],
+  "initial": "const name = user|.name;",
+  "expected": "const name = user?|.name;",
+  "hints": [
+    "Position cursor before '.', use 'i' to insert '?'",
+    "Press Esc when done"
+  ]
+}

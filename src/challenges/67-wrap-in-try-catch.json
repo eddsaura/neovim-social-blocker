@@ -1,0 +1,15 @@
+{
+  "id": "wrap-in-try-catch",
+  "name": "Add Try-Catch Block",
+  "description": "Wrap the risky code in a try-catch block",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "hard",
+  "tags": ["coding", "practical", "error-handling"],
+  "initial": "|riskyOperation();",
+  "expected": "try {\n  |riskyOperation();\n} catch (e) {\n  console.error(e);\n}",
+  "hints": [
+    "Use 'O' to open line above, type 'try {'",
+    "Use 'o' below, add catch block"
+  ]
+}

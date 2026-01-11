@@ -1,0 +1,15 @@
+{
+  "id": "add-export",
+  "name": "Add Export Keyword",
+  "description": "Add 'export' before the function declaration",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "modules"],
+  "initial": "|function helper() {}",
+  "expected": "|export function helper() {}",
+  "hints": [
+    "Use 'I' to insert at line start",
+    "Type 'export ' then press Esc"
+  ]
+}

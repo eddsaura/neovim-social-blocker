@@ -1,0 +1,15 @@
+{
+  "id": "change-string-to-template",
+  "name": "String to Template Literal",
+  "description": "Change single quotes to backticks for template literal",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "strings"],
+  "initial": "const msg = |'Hello';",
+  "expected": "const msg = |`Hello`;",
+  "hints": [
+    "Use 'f'' to find the quote, 'r`' to replace",
+    "Repeat for the closing quote"
+  ]
+}

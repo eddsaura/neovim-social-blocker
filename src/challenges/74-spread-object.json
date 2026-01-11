@@ -1,0 +1,15 @@
+{
+  "id": "spread-object",
+  "name": "Add Spread Operator",
+  "description": "Change 'obj' to '...obj' to spread the object",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "objects"],
+  "initial": "const merged = { |obj, extra: true };",
+  "expected": "const merged = { |...obj, extra: true };",
+  "hints": [
+    "Use 'i' to insert before 'obj'",
+    "Type '...' then press Esc"
+  ]
+}

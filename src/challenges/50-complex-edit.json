@@ -1,0 +1,15 @@
+{
+  "id": "complex-edit",
+  "name": "Extract Variable",
+  "description": "Extract 'value * 2' to a variable: change to 'const doubled = value * 2; return doubled;'",
+  "type": "editing",
+  "category": "combined",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "refactoring"],
+  "initial": "function double(value) {\n  |return value * 2;\n}",
+  "expected": "function double(value) {\n  const doubled = value * 2;\n  |return doubled;\n}",
+  "hints": [
+    "Use 'ct;' to change 'return value * 2' to the const line",
+    "Use 'o' to open a new line and add the return"
+  ]
+}

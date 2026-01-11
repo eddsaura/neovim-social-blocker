@@ -1,0 +1,15 @@
+{
+  "id": "select-inner-block",
+  "name": "Select and Change Block",
+  "description": "Select the if block content and change it to 'return;' using 'viB'",
+  "type": "editing",
+  "category": "visual-select",
+  "difficulty": "hard",
+  "tags": ["advanced", "visual", "text-objects"],
+  "initial": "if (condition) {\n  |doSomething();\n  doMore();\n}",
+  "expected": "if (condition) {\n|return;\n}",
+  "hints": [
+    "Use 'viB' or 'vi{' to visually select inside braces",
+    "Then 'c' to change and type new content"
+  ]
+}

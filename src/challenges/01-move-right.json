@@ -1,0 +1,15 @@
+{
+  "id": "move-right",
+  "name": "Move Right",
+  "description": "Move the cursor 5 characters to the right using 'l'",
+  "type": "motion",
+  "category": "basic-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "basic"],
+  "initial": "|Hello World",
+  "expected": "Hello| World",
+  "hints": [
+    "Use 'l' to move right one character",
+    "Press 'l' five times or use '5l'"
+  ]
+}

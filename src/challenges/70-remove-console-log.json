@@ -1,0 +1,15 @@
+{
+  "id": "remove-console-log",
+  "name": "Remove Debug Statement",
+  "description": "Remove the console.log line from the function",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "cleanup"],
+  "initial": "function process(data) {\n  |console.log('debug:', data);\n  return data.map(x => x * 2);\n}",
+  "expected": "function process(data) {\n  |return data.map(x => x * 2);\n}",
+  "hints": [
+    "Use 'dd' to delete the entire line",
+    "The cursor moves to the next line automatically"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "move-down",
+  "name": "Move Down",
+  "description": "Move the cursor down 3 lines using 'j'",
+  "type": "motion",
+  "category": "basic-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "basic"],
+  "initial": "|Line 1\nLine 2\nLine 3\nLine 4\nLine 5",
+  "expected": "Line 1\nLine 2\nLine 3\n|Line 4\nLine 5",
+  "hints": [
+    "Use 'j' to move down one line",
+    "Press 'j' three times or use '3j'"
+  ]
+}

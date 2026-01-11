@@ -1,0 +1,15 @@
+{
+  "id": "goto-line-start",
+  "name": "Go to File Start",
+  "description": "Jump to the first line of the file using 'gg'",
+  "type": "motion",
+  "category": "line-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "line"],
+  "initial": "Line 1\nLine 2\nLine 3\n|Line 4\nLine 5",
+  "expected": "|Line 1\nLine 2\nLine 3\nLine 4\nLine 5",
+  "hints": [
+    "Use 'gg' to jump to the first line",
+    "Use 'G' to jump to the last line"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "delete-around-tags",
+  "name": "Delete Around Tags",
+  "description": "Delete the entire <span> element including tags using 'dat'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "text-objects", "html"],
+  "initial": "<div><span>|delete me</span></div>",
+  "expected": "<div>|</div>",
+  "hints": [
+    "Use 'dat' to delete around tag (includes the tags)",
+    "Use 'dit' to delete just inside the tags"
+  ]
+}

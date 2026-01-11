@@ -1,0 +1,15 @@
+{
+  "id": "visual-block-insert",
+  "name": "Visual Block Insert",
+  "description": "Add '//' comment prefix to all 3 lines using Ctrl-v block mode",
+  "type": "editing",
+  "category": "visual-select",
+  "difficulty": "hard",
+  "tags": ["advanced", "visual", "block"],
+  "initial": "|line1\nline2\nline3",
+  "expected": "|// line1\n// line2\n// line3",
+  "hints": [
+    "Use Ctrl-v to enter visual block mode",
+    "Select down with 'j', then 'I' to insert at start of each line"
+  ]
+}

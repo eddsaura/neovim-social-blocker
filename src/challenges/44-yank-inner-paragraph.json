@@ -1,0 +1,15 @@
+{
+  "id": "yank-inner-paragraph",
+  "name": "Yank and Duplicate Paragraph",
+  "description": "Copy the paragraph and paste it below using 'yip' and 'p'",
+  "type": "editing",
+  "category": "yank-paste",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "text-objects"],
+  "initial": "|First paragraph here.\nWith two lines.\n\nSecond paragraph.",
+  "expected": "First paragraph here.\nWith two lines.\n\n|First paragraph here.\nWith two lines.\n\nSecond paragraph.",
+  "hints": [
+    "Use 'yip' to yank inner paragraph",
+    "Move to empty line and use 'p' to paste"
+  ]
+}

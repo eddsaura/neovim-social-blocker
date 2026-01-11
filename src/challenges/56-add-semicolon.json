@@ -1,0 +1,15 @@
+{
+  "id": "add-semicolon",
+  "name": "Add Semicolon at End",
+  "description": "Add a semicolon at the end of the line using 'A;'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "append"],
+  "initial": "|const x = 5",
+  "expected": "const x = 5;|",
+  "hints": [
+    "Use 'A' to append at end of line",
+    "Then type ';' and press Esc"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "wrap-jsx-div",
+  "name": "Wrap in JSX Fragment",
+  "description": "Wrap the content with React fragment <>...</>",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "hard",
+  "tags": ["coding", "practical", "react", "jsx"],
+  "initial": "return (\n  |<Header />\n  <Main />\n);",
+  "expected": "return (\n  |<>\n    <Header />\n    <Main />\n  </>\n);",
+  "hints": [
+    "Add '<>' before first element",
+    "Add '</>' after last element, indent content"
+  ]
+}

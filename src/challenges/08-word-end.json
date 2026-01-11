@@ -1,0 +1,15 @@
+{
+  "id": "word-end",
+  "name": "Word End",
+  "description": "Move to the end of the current word using 'e'",
+  "type": "motion",
+  "category": "word-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "word"],
+  "initial": "|function test() {}",
+  "expected": "functio|n test() {}",
+  "hints": [
+    "Use 'e' to move to the end of the current/next word",
+    "The cursor lands on the last character of the word"
+  ]
+}

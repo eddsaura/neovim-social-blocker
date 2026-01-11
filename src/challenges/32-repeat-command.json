@@ -1,0 +1,15 @@
+{
+  "id": "repeat-command",
+  "name": "Repeat Last Command",
+  "description": "Delete both 'bad' words using 'dw' then '.' to repeat",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "repeat"],
+  "initial": "|bad good bad good",
+  "expected": "|good good",
+  "hints": [
+    "Use 'dw' to delete first word",
+    "Move to next 'bad' with 'w', then '.' to repeat delete"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "join-lines",
+  "name": "Join Lines",
+  "description": "Join the two lines into one using 'J'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["beginner", "editing", "join"],
+  "initial": "|Hello\nWorld",
+  "expected": "Hello| World",
+  "hints": [
+    "Use 'J' to join the current line with the next",
+    "This adds a space between them"
+  ]
+}

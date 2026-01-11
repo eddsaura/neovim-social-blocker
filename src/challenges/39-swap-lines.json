@@ -1,0 +1,15 @@
+{
+  "id": "swap-lines",
+  "name": "Swap Lines",
+  "description": "Swap line 2 and line 3 using 'ddp'",
+  "type": "editing",
+  "category": "yank-paste",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "yank"],
+  "initial": "line 1\n|line 2\nline 3\nline 4",
+  "expected": "line 1\nline 3\n|line 2\nline 4",
+  "hints": [
+    "Use 'dd' to delete line 2",
+    "Use 'p' to paste it below line 3"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "delete-till-end-word",
+  "name": "Delete Multiple Words",
+  "description": "Delete 3 words using 'd3w'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "counts"],
+  "initial": "|delete these three words keep these",
+  "expected": "|words keep these",
+  "hints": [
+    "Use a count before the motion: 'd3w'",
+    "Counts work with most vim commands"
+  ]
+}

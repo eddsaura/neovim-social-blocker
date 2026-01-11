@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0f0f14;
+  color: #c0caf5;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.builder-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.builder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #24283b;
+}
+
+.builder-header h1 {
+  font-size: 24px;
+  color: #7aa2f7;
+  font-weight: 600;
+}
+
+.builder-header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.builder-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+}
+
+.editor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editor-section h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7aa2f7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.editor-wrapper {
+  background: #1a1b26;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 300px;
+  border: 1px solid #24283b;
+}
+
+.cursor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #24283b;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cursor-info .label {
+  color: #565f89;
+}
+
+.cursor-info .value {
+  color: #9ece6a;
+}
+
+.cursor-info button {
+  margin-left: auto;
+  padding: 4px 12px;
+  background: #3d59a1;
+  color: #c0caf5;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cursor-info button:hover {
+  background: #7aa2f7;
+}
+
+.metadata-section {
+  background: #1a1b26;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #24283b;
+}
+
+.metadata-section h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7aa2f7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #565f89;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 12px;
+  background: #24283b;
+  border: 1px solid #3b4261;
+  border-radius: 6px;
+  color: #c0caf5;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #7aa2f7;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #565f89;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #7aa2f7;
+  color: #1a1b26;
+}
+
+.btn-primary:hover {
+  background: #89b4fa;
+}
+
+.btn-secondary {
+  background: #3d59a1;
+  color: #c0caf5;
+}
+
+.btn-secondary:hover {
+  background: #4d69b1;
+}
+
+.btn-success {
+  background: #9ece6a;
+  color: #1a1b26;
+}
+
+.btn-success:hover {
+  background: #a9d879;
+}
+
+.preview-section {
+  background: #1a1b26;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #24283b;
+}
+
+.preview-section h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7aa2f7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.json-preview {
+  background: #0f0f14;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.json-preview .key {
+  color: #7aa2f7;
+}
+
+.json-preview .string {
+  color: #9ece6a;
+}
+
+.json-preview .number {
+  color: #ff9e64;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background: #9ece6a;
+  color: #1a1b26;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.vim-editor-container .cm-editor {
+  height: 100%;
+}

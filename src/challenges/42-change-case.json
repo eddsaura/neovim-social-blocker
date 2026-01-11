@@ -1,0 +1,15 @@
+{
+  "id": "change-case",
+  "name": "Change Case",
+  "description": "Change 'hello' to 'HELLO' using 'gUw'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "case"],
+  "initial": "|hello world",
+  "expected": "|HELLO world",
+  "hints": [
+    "Use 'gU' followed by a motion to uppercase",
+    "Use 'gu' to lowercase, '~' to toggle"
+  ]
+}

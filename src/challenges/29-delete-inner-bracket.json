@@ -1,0 +1,15 @@
+{
+  "id": "delete-inner-bracket",
+  "name": "Delete Inside Brackets",
+  "description": "Delete the array contents using 'di['",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "text-objects"],
+  "initial": "const arr = [|1, 2, 3];",
+  "expected": "const arr = [|];",
+  "hints": [
+    "Use 'di[' or 'di]' to delete inside brackets",
+    "Works from anywhere inside the brackets"
+  ]
+}

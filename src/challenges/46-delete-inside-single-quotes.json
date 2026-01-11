@@ -1,0 +1,15 @@
+{
+  "id": "delete-inside-single-quotes",
+  "name": "Delete Inside Single Quotes",
+  "description": "Delete the content inside single quotes using \"di'\"",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "text-objects"],
+  "initial": "const key = '|secret_key_123';",
+  "expected": "const key = '|';",
+  "hints": [
+    "Use di' to delete inside single quotes",
+    "Works similarly to di\" for double quotes"
+  ]
+}

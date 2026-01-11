@@ -1,0 +1,15 @@
+{
+  "id": "toggle-boolean",
+  "name": "Toggle Boolean Value",
+  "description": "Change 'true' to 'false'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "values"],
+  "initial": "const enabled = |true;",
+  "expected": "const enabled = |false;",
+  "hints": [
+    "Use 'cw' to change word",
+    "Type 'false' then press Esc"
+  ]
+}

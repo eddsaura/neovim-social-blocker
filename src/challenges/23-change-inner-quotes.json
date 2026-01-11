@@ -1,0 +1,15 @@
+{
+  "id": "change-inner-quotes",
+  "name": "Change Inside Quotes",
+  "description": "Change the string content to 'world' using 'ci\"'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["intermediate", "editing", "text-objects"],
+  "initial": "const msg = \"|hello\";",
+  "expected": "const msg = \"|world\";",
+  "hints": [
+    "Use 'ci\"' to change inside double quotes",
+    "Works from anywhere inside the quotes"
+  ]
+}

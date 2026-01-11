@@ -1,0 +1,15 @@
+{
+  "id": "add-type-annotation",
+  "name": "Add Type Annotation",
+  "description": "Add ': string' type annotation to the parameter",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "typescript"],
+  "initial": "function greet(name|) {}",
+  "expected": "function greet(name: string|) {}",
+  "hints": [
+    "Use 'a' to append after cursor",
+    "Type ': string' then press Esc"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "change-around-quotes",
+  "name": "Change Around Quotes",
+  "description": "Change the entire string including quotes to a number using 'ca\"'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "text-objects"],
+  "initial": "const val = \"|hello\";",
+  "expected": "const val = |42;",
+  "hints": [
+    "Use 'ca\"' to change around quotes (includes the quotes)",
+    "Type '42' after the quotes are deleted"
+  ]
+}

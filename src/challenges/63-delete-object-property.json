@@ -1,0 +1,15 @@
+{
+  "id": "delete-object-property",
+  "name": "Delete Object Property",
+  "description": "Delete the 'debug' property from the object",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "objects"],
+  "initial": "const obj = {\n  name: 'test',\n  |debug: true,\n  value: 42\n};",
+  "expected": "const obj = {\n  name: 'test',\n  |value: 42\n};",
+  "hints": [
+    "Use 'dd' to delete the entire line",
+    "Make sure to handle the trailing comma if needed"
+  ]
+}

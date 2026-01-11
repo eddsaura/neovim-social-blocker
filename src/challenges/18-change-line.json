@@ -1,0 +1,15 @@
+{
+  "id": "change-line",
+  "name": "Change Entire Line",
+  "description": "Replace the entire line with 'return false;' using 'cc'",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["beginner", "editing", "change"],
+  "initial": "function test() {\n  |return true;\n}",
+  "expected": "function test() {\n  |return false;\n}",
+  "hints": [
+    "Use 'cc' to change the entire line",
+    "This deletes the line content and enters insert mode"
+  ]
+}

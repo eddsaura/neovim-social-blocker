@@ -1,0 +1,15 @@
+{
+  "id": "till-char-forward",
+  "name": "Till Character Forward",
+  "description": "Jump to just before the '(' using 't('",
+  "type": "motion",
+  "category": "find-motion",
+  "difficulty": "easy",
+  "tags": ["beginner", "navigation", "find"],
+  "initial": "|function greet(name) {}",
+  "expected": "function gree|t(name) {}",
+  "hints": [
+    "Use 't' followed by a character to jump to just before it",
+    "'t' stops one character before, 'f' stops on the character"
+  ]
+}

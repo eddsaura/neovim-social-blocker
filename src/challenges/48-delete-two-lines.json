@@ -1,0 +1,15 @@
+{
+  "id": "delete-two-lines",
+  "name": "Delete Multiple Lines",
+  "description": "Delete 2 lines at once using '2dd'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "hard",
+  "tags": ["advanced", "editing", "counts"],
+  "initial": "keep this\n|delete this\ndelete this too\nkeep this also",
+  "expected": "keep this\n|keep this also",
+  "hints": [
+    "Use '2dd' to delete 2 lines",
+    "The count goes before the command"
+  ]
+}

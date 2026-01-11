@@ -1,0 +1,15 @@
+{
+  "id": "delete-function-call",
+  "name": "Delete Function Call",
+  "description": "Delete the entire console.log() call using 'df)'",
+  "type": "editing",
+  "category": "delete",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "functions"],
+  "initial": "const x = 1;\n|console.log(x);\nreturn x;",
+  "expected": "const x = 1;\n|\nreturn x;",
+  "hints": [
+    "Use 'df)' to delete through the closing paren",
+    "Or use 'dd' to delete the entire line"
+  ]
+}

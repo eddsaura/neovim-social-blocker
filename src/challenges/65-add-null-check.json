@@ -1,0 +1,15 @@
+{
+  "id": "add-null-check",
+  "name": "Add Nullish Coalescing",
+  "description": "Add '?? default' after the expression",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "easy",
+  "tags": ["coding", "practical", "safety"],
+  "initial": "const val = |getValue();",
+  "expected": "const val = getValue() ?? 'default'|;",
+  "hints": [
+    "Use 'f;' to find semicolon, 'i' to insert before",
+    "Type \" ?? 'default'\" then press Esc"
+  ]
+}

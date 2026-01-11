@@ -1,0 +1,15 @@
+{
+  "id": "visual-select-word",
+  "name": "Visual Select and Delete",
+  "description": "Select 'remove_this' visually and delete it",
+  "type": "editing",
+  "category": "visual-select",
+  "difficulty": "medium",
+  "tags": ["intermediate", "visual", "editing"],
+  "initial": "keep |remove_this keep",
+  "expected": "keep | keep",
+  "hints": [
+    "Press 'v' to enter visual mode",
+    "Use 'e' or 'w' to extend selection, then 'd' to delete"
+  ]
+}

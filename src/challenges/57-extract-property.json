@@ -1,0 +1,15 @@
+{
+  "id": "extract-property",
+  "name": "Extract Object Property",
+  "description": "Change obj.value to destructured { value } = obj",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "hard",
+  "tags": ["coding", "practical", "refactoring"],
+  "initial": "const x = |obj.value;",
+  "expected": "const { value } = |obj;",
+  "hints": [
+    "Delete 'obj.value', type '{ value } = obj'",
+    "Use 'C' to change to end of line"
+  ]
+}

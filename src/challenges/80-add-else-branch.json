@@ -1,0 +1,15 @@
+{
+  "id": "add-else-branch",
+  "name": "Add Else Branch",
+  "description": "Add an else branch to the if statement",
+  "type": "editing",
+  "category": "change",
+  "difficulty": "medium",
+  "tags": ["coding", "practical", "control-flow"],
+  "initial": "if (condition) {\n  doSomething();\n|}",
+  "expected": "if (condition) {\n  doSomething();\n|} else {\n  doOther();\n}",
+  "hints": [
+    "Position at '}', use 'a' to append",
+    "Type ' else {\\n  doOther();\\n}'"
+  ]
+}
