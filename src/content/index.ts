@@ -90,8 +90,10 @@ function handleChallengeMessage(event: MessageEvent) {
   // Verify origin is from our extension
   if (event.data?.type === 'CHALLENGE_COMPLETE') {
     hideChallenge();
-    // Reload the page to show content
-    window.location.reload();
+    // Small delay to ensure storage has synced before reload
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   }
 }
 

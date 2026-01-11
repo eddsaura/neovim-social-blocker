@@ -91,11 +91,9 @@ export function App() {
             setState('success');
             const completionTime = Date.now() - startTime;
             setElapsedTime(completionTime);
+            // Save unlock state - user clicks Continue to reload
             unlockTwitter();
             recordAttempt(true, completionTime);
-            if (window.parent !== window) {
-              window.parent.postMessage({ type: 'CHALLENGE_COMPLETE' }, '*');
-            }
           }
         }
       }, 100);
@@ -110,15 +108,12 @@ export function App() {
 
   const handleEditorReady = useCallback((handle: VimEditorHandle) => {
     editorRef.current = handle;
-    handle.focus();
-  }, []);
-
-  // Set cursor when challenges load
-  useEffect(() => {
-    if (challenges.length > 0 && editorRef.current) {
+    // Set cursor to the starting position for the first challenge
+    if (challenges.length > 0) {
       const firstChallenge = challenges[0];
-      editorRef.current.setCursor(firstChallenge.cursorStart.line, firstChallenge.cursorStart.col);
+      handle.setCursor(firstChallenge.cursorStart.line, firstChallenge.cursorStart.col);
     }
+    handle.focus();
   }, [challenges]);
 
   const handleTimeUp = useCallback(() => {

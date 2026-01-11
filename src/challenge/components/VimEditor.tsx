@@ -143,8 +143,26 @@ export function VimEditor({
       onModeChange?.(newMode);
     };
 
-    // Create extensions
+    // Block arrow keys - force users to learn hjkl
+    const blockArrowKeys = EditorView.domEventHandlers({
+      keydown: (event) => {
+        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+          event.preventDefault();
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          return true; // Block the key
+        }
+        // Log non-modifier keys
+        if (!['Shift', 'Control', 'Alt', 'Meta', 'CapsLock'].includes(event.key)) {
+          onKeyPress?.(event.key);
+        }
+        return false; // Let vim handle it
+      },
+    });
+
+    // Create extensions - blockArrowKeys MUST come before vim() to intercept first
     const extensions = [
+      blockArrowKeys,
       vim(),
       tokyoNightTheme,
       javascript(),
@@ -154,15 +172,6 @@ export function VimEditor({
         if (update.docChanged) {
           onChange?.(update.state.doc.toString());
         }
-      }),
-      // Capture key presses for logging
-      EditorView.domEventHandlers({
-        keydown: (event) => {
-          if (!['Shift', 'Control', 'Alt', 'Meta', 'CapsLock'].includes(event.key)) {
-            onKeyPress?.(event.key);
-          }
-          return false; // Let vim handle it
-        },
       }),
     ];
 
